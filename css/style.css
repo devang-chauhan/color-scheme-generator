@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+button,
+input,
+textarea {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-color: #fefae0;
+
+}
+
+nav {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 900;
+    background: #d4a373;
+    position: fixed;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.container {
+    width: 30%;
+}
+
+/* form */
+form {
+    box-sizing: border-box;
+    margin-top: 3.5em;
+    padding: 0.5em;
+    display: grid;
+    background-color: #faedcd;
+    border-radius: 5px;
+}
+
+input,
+textarea {
+    margin-top: 0.5em;
+    background-color: #fefae0;
+    border: none;
+    border-radius: 5px;
+}
+
+input {
+    padding: 0.2em 0;
+    margin-bottom: 0.5em;
+}
+
+button {
+    margin: 0.5em 0 0 0;
+    padding: 0.5em 1em;
+    background-color: #ccd5ae;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* blogs */
+#blogs {
+    font-size: 1rem;
+    margin: 1em 0 0 0;
+}
+
+#blogs h3 {
+    font-weight: 500;
+    margin-bottom: 0.5em;
+}
+
+#blogs p {
+    font-weight: 400;
+}
+
+.post {
+    margin-bottom: 1em;
+    background-color: #e9edc9;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+@media (max-width: 450px) {
+
+    body {
+        width: 100vw;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
