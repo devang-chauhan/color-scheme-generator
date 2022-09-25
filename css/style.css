@@ -77,11 +77,15 @@ main {
     justify-content: center;
 }
 
-main div {
+.color-container {
     width: 20%;
     display: flex;
     flex-direction: column;
     justify-content: end;
+}
+
+.color-container div {
+    height: 100%;
 }
 
 main div p {
