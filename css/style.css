@@ -20,6 +20,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 3em;
 }
 
 .common {
@@ -31,19 +32,72 @@ header {
     border-radius: 6px;
 }
 
-header select {
-    margin: 0 0.75em;
+form {
+    border: 1px solid green;
     width: 19.5em;
-    line-height: 1.5em;
+    margin: 0 0.75em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+select {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    padding-left: 1px;
     font-weight: 400;
-    background-color: yellow;
+    line-height: 1.5em;
+}
+
+option {
+    background-color: white;
+}
+
+form::after {
+    content: url('../images/selector.png');
 }
 
 header button {
+    height: 100%;
     font-weight: 500;
+
 }
 
 header input {
-    height: 40px;
+    height: 100%;
     width: 60px;
+}
+
+main {
+    height: calc(100% - 3em);
+    display: flex;
+    justify-content: center;
+}
+
+main div {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+main div p {
+    background-color: white;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.65em 1.125em;
+}
+
+@media screen and (max-width: 450px) {
+    header {
+        height: 20%;
+    }
+
+    main {
+        height: 80%;
+    }
 }
