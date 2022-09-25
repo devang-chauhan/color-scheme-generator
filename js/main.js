@@ -3,9 +3,6 @@ const getColorSchemeBtn = document.getElementById("get-color-scheme");
 const mainEl = document.getElementById("container");
 
 
-
-
-
 function fetchColors() {
 
     let mainHTML = '';
@@ -29,8 +26,6 @@ function fetchColors() {
 }
 
 
-
-
-    
-
 getColorSchemeBtn.addEventListener("click", fetchColors);
+
+fetchColors();
