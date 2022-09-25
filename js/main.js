@@ -1,30 +1,36 @@
 const colorPickerEl = document.getElementById("color-picker");
-
-const mode = "complement";
-const count = 7;
-let colors = [];
-let colorNames = [];
+const getColorSchemeBtn = document.getElementById("get-color-scheme");
+const mainEl = document.getElementById("container");
 
 
 
-function getColorScheme() {
-    
-    colors = [];
-    colorNames = [];
+
+
+function fetchColors() {
+
+    let mainHTML = '';
+    const mode = document.getElementById("mode").value;
     const cleanHex = colorPickerEl.value.split('#')[1];
+    const url = `https://www.thecolorapi.com/scheme?hex=${cleanHex}&mode=${mode.toLowerCase()}`;
 
-    const url = `https://www.thecolorapi.com/scheme?hex=${cleanHex}&mode=${mode}&count=${count}`;
     fetch(url, { method: "GET" })
         .then(res => res.json())
         .then(data => {
             data.colors.forEach(element => {
-                colors.push(element.hex.value);
-                colorNames.push(element.name.value);
+                const color = element.hex.value;
+                mainHTML += `
+                <div style="background-color: ${color};">
+                    <p>${color}</p>
+                </div>
+                `;
             });
+            mainEl.innerHTML = mainHTML;
         });
-    
-    console.log(colors, colorNames);
 }
 
-colorPickerEl.addEventListener("change", getColorScheme);
 
+
+
+    
+
+getColorSchemeBtn.addEventListener("click", fetchColors);

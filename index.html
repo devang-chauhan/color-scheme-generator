@@ -25,21 +25,32 @@
         <header>
             <input id="color-picker" type="color">
 
-            <select name="cars" id="cars" class="common">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-            </select>
+            <form action="get" class="common">
+                <select name="mode" id="mode" >
+                    <option>Monochrome</option>
+                    <option>Monochrome-dark</option>
+                    <option>Monochrome-light</option>
+                    <option>Analogic</option>
+                    <option>Complement</option>
+                    <option>Analogic-Complement</option>
+                    <option>Triad</option>
+                    <option>Quad</option>
+                </select>
+            </form>
 
-            <button class="common">Get color scheme</button>
+            <button class="common" id="get-color-scheme">Get color scheme</button>
 
         </header>
 
-        <main>
+        <main id="container">
+
 
         </main>
         
 
     </body>
 </html>
+
+
+ 
+ 
